@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>せーつティーガード</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+        }
+
+        header {
+            background-color: #ffcc00;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        main {
+            padding: 20px;
+            display: none; /* Hide main content initially */
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #ff6600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 5px 0;
+        }
+
+        input, textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #ff6600;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff4500;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BIG VOICE BIG SMILE</h1>
+        <p>~すべての人が笑顔で暮らせる世の中を~</p>
+    </header>
+
+    <main id="main-content">
+        <section id="about">
+            <h2>私たちについて</h2>
+            <p>2024年は元日に能登半島地震がありました。また2023年のトルコ、シリアで発生した地震、2024年の台湾で発生した地震などにより、多くの人々の笑顔が失われつつあります。私達は自然災害や人災などで笑顔が失われている人々の笑顔という光を灯すことを目的に活動しております。</p>
+        </section>
+
+        <section id="mission">
+            <h2>社訓</h2>
+            <p>せーつティーガード社員は正当に選びぬかれた総会における代表者を通じて行動し、我らと我らの子孫のために諸会社との協和による成果と、全系列会社にわたって自由のもたらす恵沢を確保し、総会の行為によって再び過度な経済競争の惨禍が起こることがないようにすることを決意し、ここに主権が社員に存することを宣言し、この社訓を確定する。</p>
+            <p>我らは、恒久の平和を念願し、企業相互の関係を支配する崇高な理想を深く自覚するのであって、平和を愛する諸会社の公正と信義に信頼して、我らの安定と成長を確保しようと決意した。</p>
+            <p>我らは、成長を続け、専制と隷従、圧迫と偏狭を地上から永久に除去しようと努めている国際企業において、名誉ある地位を占めたいと思う。我らは、全世界の人々が、等しく不平等や欠乏から免れ、平和のうちに生存する権利を有することを確認する。</p>
+            <p>我らは、いづれの会社も、自社のことのみに専念して他社を無視してはならないのであって、会社道徳の法則は、普遍的なものであり、この法則にしたが従うことは、自社の主権を維持し、他社と対等関係に立とうとする各社の責務であると信ずる。</p>
+            <p>せーつティーガード社員は、自社の名誉にかけ、全力をあげてこの崇高な理想と目的を達成することを誓う。</p>
+        </section>
+
+        <section id="services">
+            <h2>私たちのサービス</h2>
+            <ul>
+                <li>セキュリティ対策</li>
+                <li>リスク管理</li>
+                <li>コンサルティングサービス</li>
+                <li>株を買ってくれた方には商品割引券をプレゼントします</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>お問い合わせ</h2>
+            <form id="contact-form">
+                <label for="name">名前:</label>
+                <input type="text" id="name" required>
+                
+                <label for="email">メールアドレス:</label>
+                <input type="email" id="email" required>
+                
+                <label for="message">メッセージ:</label>
+                <textarea id="message" required></textarea>
+                
+                <button type="submit">送信</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 せーつティーガード株式会社</p>
+    </footer>
+
+    <script>
+        const password = "Setsucraft"; // Set your password here
+        const userPassword = prompt("パスワードを入力してください:");
+
+        if (userPassword === password) {
+            document.getElementById("main-content").style.display = "block"; // Show content
+        }else {
+            alert("パスワードが正しくありません。");
+            document.body.innerHTML = "<h1>アクセス拒否</h1>"; // Deny access
+        }
+
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("メッセージが送信されました！ありがとうございます。");
+            this.reset(); // フォームをリセット
+        });
+    </script>
+</body>
+</html>
+
+
